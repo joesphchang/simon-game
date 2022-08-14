@@ -16,6 +16,10 @@ function nextSequence() {
 	console.log(gamePattern.join(' '));
 
 	// Use jQuery to select the button with the same id as the randomChosenColour
+	$('#' + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+
+	let audio = new Audio('sounds/' + randomChosenColour + '.mp3');
+	audio.play();
 }
 
 nextSequence()
